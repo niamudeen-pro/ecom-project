@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* .stroke {
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: #000;
+} */
+.customLoader div {
+  animation-duration: 0.6s;
+}
+
+.customLoader div:first-child {
+  animation-delay: 0.1s;
+}
+
+.customLoader div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.customLoader div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+a,
+p,
+.btn {
+  font-size: 1.4rem;
+}
+
+@layer base {
+  h1 {
+    @apply text-[8rem];
+  }
+
+  h2 {
+    @apply text-5xl capitalize;
+  }
+  p {
+    @apply max-w-xl w-full text-gray-400 m-0 p-0;
+  }
+
+  .btn {
+    @apply bg-black text-white py-4 px-12 rounded-lg shadow-lg;
+  }
+}
+
+@layer utilities {
+  .section {
+    @apply py-[10rem];
+  }
+
+  .customContainer {
+    @apply max-w-[120rem] mx-auto px-[10%] xl:px-0;
+  }
+  .roundBtn {
+    @apply !w-16 !h-16 rounded-full bg-white !text-black p-4;
+  }
+
+  .flexCenter {
+    @apply flex justify-center items-center;
+  }
+
+  .flexSbs {
+    @apply flex justify-between items-center;
+  }
+  .qtyBtn {
+    @apply shadow  px-4 py-2 rounded-lg  bg-black text-white;
+  }
+
+  .imgHover {
+    @apply hover:scale-110 transition-all duration-300 cursor-pointer;
+  }
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* deals swiper */
+.deals-swiper .swiper-pagination {
+  position: relative !important;
+  margin-top: 3.5rem;
+}
+.deals-swiper-buttons .swiper-button-next::after,
+.deals-swiper-buttons .swiper-button-prev::after {
+  content: "";
+}
+.deals-swiper .swiper-pagination-bullet-active {
+  background-color: #000 !important;
+}
